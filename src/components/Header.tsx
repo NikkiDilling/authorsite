@@ -15,27 +15,39 @@ export default function Header() {
       </div>
 
       <div className={classes.navigation}>
-      <Navigation />
+        <Navigation />
 
       </div>
 
       <div className={classes.icons}>
-        <FontAwesomeIcon
-          icon={faGoodreads}
-          className={classes.icon}
-        />
-        <FontAwesomeIcon
-          icon={faInstagram}
-          className={classes.icon}
-        />
-        <FontAwesomeIcon
-          icon={faTiktok}
-          className={classes.icon}
-        />
-        <FontAwesomeIcon
-          icon={faThreads}
-          className={classes.icon}
-        />
+        <a href='https://www.goodreads.com/user/show/176510995-nicole' target='_blank'>
+          <FontAwesomeIcon
+            icon={faGoodreads}
+            className={classes.icon}
+          />
+        </a>
+
+        <a href='https://www.instagram.com/ndhansen_' target='_blank'>
+          <FontAwesomeIcon
+            icon={faInstagram}
+            className={classes.icon}
+          />
+        </a>
+
+        <a href='https://www.tiktok.com/@nicole.writes5' target='_blank'>
+          <FontAwesomeIcon
+            icon={faTiktok}
+            className={classes.icon}
+          />
+        </a>
+
+        <a href='https://www.threads.net/@ndhansen_' target='_blank'>
+          <FontAwesomeIcon
+            icon={faThreads}
+            className={classes.icon}
+          />
+        </a>
+
       </div>
 
     </div>
