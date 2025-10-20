@@ -4,15 +4,19 @@
         flex-direction: row;
         align-items: center;
         width: 100%;
-        height: 45px;
+        height: 50px;
         font-size: 20px;
 
     }
 
     .title {
         color: #39275B;
-        flex: 2;
+        flex: 1;
         margin-left: 20px;
+    }
+
+    .navigation {
+        flex: 2;
     }
 
     .icons {
@@ -28,5 +32,10 @@
         .icon {
             color: #39275B;
             cursor: pointer;
+        }
+
+        .icon:hover {
+            scale: 1.06;
+            transition: all 0.4s ease-in-out;
         }
     }
