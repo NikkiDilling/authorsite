@@ -39,3 +39,9 @@
             transition: all 0.4s ease-in-out;
         }
     }
+
+@media only screen and (min-width: 600px) {
+    .navigation {
+        flex: 5;
+    }
+}
