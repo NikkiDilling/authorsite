@@ -7,14 +7,17 @@ import BlogPage from './pages/BlogPage';
 import ArtPage from './pages/ArtPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import Navigation from './components/Navigation';
 
 function App() {
 
   return (
-    <>
-      <Header />
+    <div style={{display: "flex", flexDirection: "column",minHeight: "100vh"}}>
+      <header>
+        <Header />
+      </header>
 
+
+      <main >
         <Routes>
           <Route path='/' element={<MainPage />} />
 
@@ -30,8 +33,14 @@ function App() {
 
 
         </Routes >
-      <Footer />
-    </>
+
+      </main>
+
+      <footer >
+        <Footer />
+      </footer>
+
+    </div>
   )
 }
 

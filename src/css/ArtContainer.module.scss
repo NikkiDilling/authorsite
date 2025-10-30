@@ -1,0 +1,25 @@
+.artContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+
+    img {
+        max-width: 300px;
+        margin-right: 20px;
+    }
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1600px) {
+    .artContainer {
+
+        img {
+            max-width: 600px;
+        }
+    }
+}

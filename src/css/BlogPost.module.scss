@@ -6,6 +6,7 @@
     margin-top: 16px;
     border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
 
     img {
         display: inline-block;
@@ -25,6 +26,7 @@
     margin-left: 5px;
     color: #fff;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: start;
 
@@ -38,3 +40,4 @@
         margin-bottom: 8px;
     }
 }
+

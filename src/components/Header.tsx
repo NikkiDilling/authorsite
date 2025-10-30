@@ -3,6 +3,7 @@ import { faGoodreads, faInstagram, faTiktok, faThreads } from '@fortawesome/free
 
 import classes from './../css/Header.module.scss';
 import Navigation from './Navigation';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
 
@@ -11,7 +12,8 @@ export default function Header() {
     <div className={classes.container}>
 
       <div className={classes.title}>
-        Nicole D. Hansen
+         <Link to="/">Nicole D. Hansen</Link >
+        
       </div>
 
       <div className={classes.navigation}>

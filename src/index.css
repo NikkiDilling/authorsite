@@ -9,12 +9,6 @@ body,
   font-style: normal;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
+main{
+  flex: 1;
 }
