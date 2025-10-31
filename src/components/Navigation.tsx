@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Navigation() {
     return (
         <div className={classes.container}>
-            <Link to="/ProjectSunset">Project Sunset</Link >
+            <Link to="/Book">Of Shadows and Sunsets</Link >
             <Link to="/Blog">Blog</Link >
             <Link to="/Art">Art</Link >
             <Link to="/About">About Author</Link >

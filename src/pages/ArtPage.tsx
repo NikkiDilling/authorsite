@@ -15,12 +15,24 @@ export default function ArtPage() {
                 date="October 2025"
                 excerpt="Made by Kostojj"
             />
-{/*             <ArtContainer
+             <ArtContainer
                 title="Vanadium sigil"
-                image="C:\Repositories\Test\authorsite\src\assets\Tayrem(art).png"
+                image="src\assets\Vanadian sigil.png"
                 date="October 2025"
                 excerpt="Made by Nicole D. Hansen"
-            /> */}
+            /> 
+             <ArtContainer
+                title="First meeting"
+                image="src\assets\first meeting.jpg"
+                date="October 2025"
+                excerpt="Made by Nicole D. Hansen"
+            /> 
+             <ArtContainer
+                title="Tayrem ch.7 scene"
+                image="src\assets\Tayrem (chained).jpg"
+                date="October 2025"
+                excerpt="Made by Nicole D. Hansen"
+            /> 
 
         </div>
     );

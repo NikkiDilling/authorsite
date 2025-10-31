@@ -29,9 +29,9 @@ export default function MainPage() {
           <img src="src\assets\projectSunset(small).png" alt="profile image"  className={classes.projectSunset} />
           <div className={classes.sectionContent}>
             <div>
-              <div>Project Sunset is codename for the debut romantasy novel I’ve been writing for over 5 years. ...</div>
+              <div>Of Shadows and Sunsets the first book of the Elven Wastelands series. It is my debut romantasy novel I’ve been writing for over 5 years. ...</div>
             </div>
-            <Link to='/ProjectSunset' className={classes.readMoreBtn}>Read more</Link>
+            <Link to='/Book' className={classes.readMoreBtn}>Read more</Link>
           </div>
         </div>
       </div>
