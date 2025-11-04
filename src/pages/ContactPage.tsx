@@ -1,15 +1,16 @@
 
-import classes from './../css/MainPage.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoodreads, faInstagram, faTiktok, faThreads } from '@fortawesome/free-brands-svg-icons';
+import classes from './../css/MainPage.module.scss';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export default function ContactPage() {
 
 
   return (
-    <div className={classes.container}>
+    <div style={{display: "flex", flexDirection:"column", width: "90%", margin: "30px auto", justifyContent: "center", alignItems: "center"}}>
 
-      <h1>Contact Me</h1>
+      <h3>Contact Me</h3>
+
       <div>I'm currently working on setting up a seperate email, until then you can reach me here:
 
         <span>

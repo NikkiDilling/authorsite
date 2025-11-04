@@ -35,8 +35,12 @@ export default function ArtPage() {
     ];
     return (
         <div className={classes.container}>
+            <div>
+                Here are some artworks either made by me or commissioned from other artists for my books.
+            </div>
+            
             <Box className={classes.box}>
-                <ImageList variant="masonry" cols={3} gap={2}>
+                <ImageList variant="masonry" cols={3} gap={15}>
                     {itemData.map((item) => (
                         <ImageListItem key={item.img}>
                             <img

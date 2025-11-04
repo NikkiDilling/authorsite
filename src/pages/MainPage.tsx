@@ -16,7 +16,7 @@ export default function MainPage() {
           <div className={classes.sectionContent}>
             <div>
               <div>My name is Nicole. I’m a writer from Denmark who daylights as a software developer. </div>
-              <div>Here on my author site, you can find information about me, my writing journey, and my debut novel, Project Sunset. ...</div>
+              <div>Here on my author site, you can find information about me, my writing journey, and my debut novel, "Of Shadows and Sunsets". ...</div>
             </div>
             <Link to='/About' className={classes.readMoreBtn} >Learn more about me</Link>
           </div>
@@ -26,8 +26,8 @@ export default function MainPage() {
          <img  src="src\assets\divider.png"  className={classes.divider}/>
 
         <div className={classes.section}>
-          <img src="src\assets\projectSunset(small).png" alt="profile image"  className={classes.projectSunset} />
           <div className={classes.sectionContent}>
+            <h3>Of Shadows and Sunsets</h3>
             <div>
               <div>Of Shadows and Sunsets the first book of the Elven Wastelands series. It is my debut romantasy novel I’ve been writing for over 5 years. ...</div>
             </div>

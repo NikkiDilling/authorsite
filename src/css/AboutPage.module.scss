@@ -1,0 +1,23 @@
+.container {
+    background: #ffff;
+    color: #39275B;
+    height: 100%;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+
+    img{
+        max-width: 500px;
+    }
+}
+
+.content{
+    line-height: 2;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+}
