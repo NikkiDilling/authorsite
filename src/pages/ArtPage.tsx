@@ -15,24 +15,30 @@ export default function ArtPage() {
                 date="October 2025"
                 excerpt="Made by Kostojj"
             />
-             <ArtContainer
+            <ArtContainer
+                title="Tayrem & Elayah"
+                image="src\assets\Tayrem & Elayah.png"
+                date="November 2025"
+                excerpt="Made by Nicole D. Hansen"
+            />
+            <ArtContainer
                 title="Vanadium sigil"
                 image="src\assets\Vanadian sigil.png"
                 date="October 2025"
                 excerpt="Made by Nicole D. Hansen"
-            /> 
-             <ArtContainer
+            />
+            <ArtContainer
                 title="First meeting"
                 image="src\assets\first meeting.jpg"
-                date="October 2025"
+                date="2024"
                 excerpt="Made by Nicole D. Hansen"
-            /> 
-             <ArtContainer
+            />
+            <ArtContainer
                 title="Tayrem ch.7 scene"
                 image="src\assets\Tayrem (chained).jpg"
-                date="October 2025"
+                date="2024"
                 excerpt="Made by Nicole D. Hansen"
-            /> 
+            />
 
         </div>
     );

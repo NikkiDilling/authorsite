@@ -31,7 +31,7 @@ export default function MainPage() {
             <div>
               <div>Of Shadows and Sunsets the first book of the Elven Wastelands series. It is my debut romantasy novel I’ve been writing for over 5 years. ...</div>
             </div>
-            <Link to='/Book' className={classes.readMoreBtn}>Read more</Link>
+            <Link to='/Books' className={classes.readMoreBtn}>Read more</Link>
           </div>
         </div>
       </div>

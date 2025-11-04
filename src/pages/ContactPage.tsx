@@ -1,6 +1,7 @@
 
 import classes from './../css/MainPage.module.scss';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoodreads, faInstagram, faTiktok, faThreads } from '@fortawesome/free-brands-svg-icons';
 
 export default function ContactPage() {
 
@@ -9,7 +10,17 @@ export default function ContactPage() {
     <div className={classes.container}>
 
       <h1>Contact Me</h1>
-      <div>You can reach me at:</div>
+      <div>I'm currently working on setting up a seperate email, until then you can reach me here:
+
+        <span>
+          <a href='https://www.instagram.com/ndhansen_' target='_blank'>
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className={classes.icon}
+            />
+          </a>
+        </span>
+      </div>
     </div>
   );
 }
