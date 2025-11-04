@@ -3,12 +3,6 @@ import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import StepContent from '@mui/material/StepContent';
-import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import { useState } from 'react';
-
 
 const steps = [
   {
@@ -23,7 +17,7 @@ const steps = [
 ];
 
 export default function ProjectSunsetPage() {
-  const [activeStep, setActiveStep] = useState(0);
+/*   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -35,7 +29,7 @@ export default function ProjectSunsetPage() {
 
   const handleReset = () => {
     setActiveStep(0);
-  };
+  }; */
 
 
   return (
@@ -57,9 +51,9 @@ export default function ProjectSunsetPage() {
         </div>
         <section>
           <Box sx={{ maxWidth: 400 }}>
-            <Stepper activeStep={activeStep} orientation="vertical" >
-              {steps.map((step,inedx) => (
-                <Step key={step.label} onClick={() => setActiveStep(inedx)}>
+            <Stepper /* activeStep={activeStep} */ orientation="vertical" >
+              {steps.map((step) => (
+                <Step key={step.label}/*  onClick={() => setActiveStep(index)} */>
                   <StepLabel>
                     {step.label}
                   </StepLabel>
