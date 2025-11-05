@@ -8,27 +8,27 @@ export default function ArtPage() {
 
     const itemData = [
         {
-            img: 'src/assets/Tayrem(art).png',
+            img: '/assets/Tayrem(art).png',
             title: 'Tayrem - Half body',
             author: 'ig: Kostojj',
         },
         {
-            img: 'src/assets/Tayrem & Elayah.png',
+            img: '/assets/Tayrem & Elayah.png',
             title: 'Tayrem & Elayah',
             author: 'Nicole D. Hansen',
         },
         {
-            img: 'src/assets/Vanadian sigil.png',
+            img: '/assets/Vanadian sigil.png',
             title: 'Vanadium sigil',
             author: 'Nicole D. Hansen',
         },
         {
-            img: 'src/assets/first meeting.jpg',
+            img: '/assets/first meeting.jpg',
             title: 'First meeting',
             author: 'Nicole D. Hansen',
         },
         {
-            img: 'src/assets/Tayrem (chained).jpg',
+            img: '/assets/Tayrem (chained).jpg',
             title: 'Tayrem ch.7 scene',
             author: 'Nicole D. Hansen',
         }

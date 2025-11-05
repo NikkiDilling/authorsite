@@ -9,13 +9,13 @@ export default function AboutPage() {
     <div className={classes.container}>
 
       <section>
-        <img src="src/assets/about image.png" alt="" width={500} />
+        <img src="/assets/about image.png" alt="" width={500} />
         <div>
           <h1>Hi!</h1>
 
           <div style={{ display: "flex", flexDirection: "row", alignItems: "center", padding: "0 0 20px 0" }}>
             <div>Star Sign:</div>
-            <img src="src/assets/aries.png" alt="star sign" width={100} />
+            <img src="/assets/aries.png" alt="star sign" width={100} />
           </div>
           <div className={classes.content}>
             <div>
