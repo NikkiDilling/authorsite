@@ -12,7 +12,7 @@ export default function MainPage() {
         <h1>Welcome!</h1>
 
         <div className={classes.section}>
-          <img src="src\assets\pfp.gif" alt="profile image" className={classes.pfp} />
+          <img src="/assets/\pfp.gif" alt="profile image" className={classes.pfp} />
           <div className={classes.sectionContent}>
             <div>
               <div>My name is Nicole. I’m a writer from Denmark who daylights as a software developer. </div>
@@ -23,7 +23,7 @@ export default function MainPage() {
 
         </div>
 
-         <img  src="src\assets\divider.png"  className={classes.divider}/>
+         <img  src="/assets/\divider.png"  className={classes.divider}/>
 
         <div className={classes.section}>
           <div className={classes.sectionContent}>
@@ -37,13 +37,13 @@ export default function MainPage() {
       </div>
 
       <div className={classes.recentPosts}>
-         <img  src="src\assets\divider.png"  className={classes.divider}/>
+         <img  src="/assets/\divider.png"  className={classes.divider}/>
         <h4>Recent blog posts</h4>
         <div>
           {/* Blog posts will go here */}
           <BlogPostPreview 
             title='Author Site Launched!'
-            image='src\assets\pfp.jpg'
+            image='/assets/\pfp.jpg'
             date='Octoder 31, 2024'
             excerpt='This is a test excerpt for the blog post preview component.'
             link="/Blog/1"

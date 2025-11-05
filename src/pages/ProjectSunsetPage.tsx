@@ -48,7 +48,7 @@ export default function ProjectSunsetPage() {
 
           <div>Enter a world of elves, elemental spirits and intrigue!</div>
 
-          <img src="src\assets\world map.png" alt="World Map" />
+          <img src="/assets/\world map.png" alt="World Map" />
           <h2> Elven Wastelands</h2>
         </div>
         <section>
