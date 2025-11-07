@@ -29,14 +29,14 @@ export default function MainPage() {
           <div className={classes.sectionContent}>
             <h3>Of Shadows and Sunsets</h3>
             <div>
-              <div>Of Shadows and Sunsets the first book of the Elven Wastelands series. It is my debut romantasy novel I’ve been writing for over 5 years. ...</div>
+              <div>Of Shadows and Sunsets the first book of the Elven Wastelands series. It is my debut romantasy novel I’ve been writing for over 5 years...</div>
             </div>
             <Link to='/Books' className={classes.readMoreBtn}>Read more</Link>
           </div>
         </div>
       </div>
 
-      <div className={classes.recentPosts}>
+      <div className={classes.recentPosts + " unreleased"}>
          <img  src="/assets/\divider.png"  className={classes.divider}/>
         <h4>Recent blog posts</h4>
         <div>

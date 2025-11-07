@@ -1,5 +1,4 @@
-
-.container{
+.container {
     background: #ffff;
     color: #39275B;
     height: 100%;
@@ -9,29 +8,48 @@
     padding: 10px 0;
     flex-direction: column;
 
-    h1 {
-        font-size: 40px;
+
+    h2 {
+        font-size: 30px;
         font-style: italic;
+        padding: 5px !important;
     }
-    main{
+
+    main {
         display: flex;
         flex-direction: row;
+        padding: 0 !important;
+
+        img {
+            display: block;
+            width: 280px;
+            margin: 0 auto;
+        }
     }
 
-    img{
-        display: inline-block;
-        width: 200px;
-        margin: 0 auto;
+    .divider {
+        display: block;
+        margin: 40px auto !important;
+        width: 250px;
     }
 
-    section{
+    section {
         padding: 0 10px;
         position: fixed;
         right: 10px;
         top: 100px;
     }
 
-    circle, path{
+    circle,
+    path {
         fill: #755da3;
+    }
+
+    .quotes {
+        line-height: 2;
+        margin: 10px auto;
+        font-style: italic;
+        text-align: center;
+        color: rgb(231, 14, 134);
     }
 }

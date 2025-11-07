@@ -25,9 +25,27 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <img src="/assets/\divider.png" className={classes.divider} />
+
       <section>
-        
+        <div>My favourite tropes</div>
+        <ul>
+          <li>Love triangle</li>
+          <li>Best of the best</li>
+          <li>Misunderstood villain</li>
+        </ul>
       </section>
+      <img src="/assets/\divider.png" className={classes.divider} />
+
+      <section>
+        <div>My favourite books</div>
+        <ul>
+          <li>Hunger Games</li>
+          <li>Six of Crows</li>
+          <li>Twilight... (it's a fun read, okay?)</li>
+        </ul>
+      </section>
+      <img src="/assets/\divider.png" className={classes.divider} />
     </div>
   );
 }
