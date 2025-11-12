@@ -12,10 +12,11 @@ export default function Header() {
     <div className={classes.container}>
 
       <div className={classes.title}>
-         <Link to="/">Nicole D. Hansen</Link >
-        
+        <Link to="/">Nicole D. Hansen</Link >
+
       </div>
 
+{/* Replace with burger menu on mobile! */}
       <div className={classes.navigation}>
         <Navigation />
 
