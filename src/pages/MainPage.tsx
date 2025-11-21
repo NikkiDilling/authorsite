@@ -22,6 +22,8 @@ export default function MainPage() {
 
         </div>
 
+        <div className={"ml-embedded " + classes.mobileView} data-form="Hzceiy"></div>
+
         <img src="/assets/\divider.png" className={classes.divider} />
 
         <div className={classes.section}>
@@ -35,9 +37,10 @@ export default function MainPage() {
         </div>
       </div>
 
+    
       <div className={classes.recentPosts}>
 
-        <div className="ml-embedded" data-form="Hzceiy"></div>
+        <div className={"ml-embedded " + classes.desktopView} data-form="Hzceiy"></div>
 
         <div className=" unreleased">
           <img src="/assets/\divider.png" className={classes.divider} />

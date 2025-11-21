@@ -11,7 +11,11 @@ export default function ContactPage() {
 
       <h3>Contact Me</h3>
 
-      <div>I'm currently working on setting up a seperate email, until then you can reach me here:
+      <div>
+        <div>Email: <span>nicoledhansen.mail@gmail.com</span></div>
+      </div>
+
+      <div>Or you reach me here:
 
         <span>
           <a href='https://www.instagram.com/ndhansen_' target='_blank'>
