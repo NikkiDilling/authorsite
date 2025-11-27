@@ -1,12 +1,88 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoodreads, faInstagram, faTiktok, faThreads } from '@fortawesome/free-brands-svg-icons';
-
+import MenuIcon from '@mui/icons-material/Menu';
+import MailIcon from '@mui/icons-material/Mail';
 import classes from './../css/Header.module.scss';
 import Navigation from './Navigation';
 import { Link } from 'react-router-dom';
+import { Box, Button, Divider, List, ListItem, ListItemButton, ListItemIcon, SwipeableDrawer, ListItemText } from '@mui/material';
+import { useState } from 'react';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
+import Face3Icon from '@mui/icons-material/Face3';
+import CallIcon from '@mui/icons-material/Call';
 
 export default function Header() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
+  const toggleDrawer =
+    (open: boolean) =>
+      (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+          event &&
+          event.type === 'keydown' &&
+          ((event as React.KeyboardEvent).key === 'Tab' ||
+            (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+          return;
+        }
+
+        setMenuOpen(open);
+      };
+
+  const getBurgerMenuIcon = (text: string) => {
+    switch (text) {
+      case 'Books':
+        return <MenuBookIcon />;
+      case 'Blog':
+        return <MailIcon />;
+      case 'Art':
+        return <ColorLensIcon />;
+      case 'About Author':
+        return <Face3Icon />;
+      case 'Contact':
+        return <CallIcon />;
+      default:
+        return null;
+    }
+  };
+  
+  const list = () => (
+    <Box
+      sx={{ width: 250 }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <List>
+        {['Books', 'Blog', 'Art', 'About Author', 'Contact'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {getBurgerMenuIcon(text)}
+              </ListItemIcon>
+              <Link to={text}>
+                <ListItemText primary={text} />
+              </Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      {/*   <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List> */}
+    </Box>
+  );
 
   return (
     <div className={classes.container}>
@@ -16,7 +92,7 @@ export default function Header() {
 
       </div>
 
-{/* Replace with burger menu on mobile! */}
+      {/* Replace with burger menu on mobile! */}
       <div className={classes.navigation}>
         <Navigation />
 
@@ -52,6 +128,19 @@ export default function Header() {
         </a>
 
       </div>
+
+      <div className={classes.burgerMenu}>
+        <MenuIcon onClick={toggleDrawer(true)} style={{ cursor: 'pointer', marginLeft: "20px" }} />
+        <SwipeableDrawer
+          anchor={"right"}
+          open={isMenuOpen}
+          onClose={toggleDrawer(false)}
+          onOpen={toggleDrawer(true)}
+        >
+          {list()}
+        </SwipeableDrawer>
+      </div>
+
 
     </div>
   );
