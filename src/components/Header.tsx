@@ -5,7 +5,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import classes from './../css/Header.module.scss';
 import Navigation from './Navigation';
 import { Link } from 'react-router-dom';
-import { Box, Button, Divider, List, ListItem, ListItemButton, ListItemIcon, SwipeableDrawer, ListItemText } from '@mui/material';
+import { Box, List, ListItem, ListItemButton, ListItemIcon, SwipeableDrawer, ListItemText } from '@mui/material';
 import { useState } from 'react';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
@@ -55,7 +55,7 @@ export default function Header() {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {['Books', 'Blog', 'Art', 'About Author', 'Contact'].map((text, index) => (
+        {['Books', 'Blog', 'Art', 'About Author', 'Contact'].map((text) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
