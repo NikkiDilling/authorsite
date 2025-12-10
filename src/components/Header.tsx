@@ -46,26 +46,28 @@ export default function Header() {
         return null;
     }
   };
-  
+
   const list = () => (
     <Box
-      sx={{ width: 250 }}
+      sx={{ width: "100%"}}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       <List>
         {['Books', 'Blog', 'Art', 'About Author', 'Contact'].map((text) => (
-          <ListItem key={text} disablePadding>
+
+          <ListItem key={text} disablePadding className={classes.listItem}>
             <ListItemButton>
               <ListItemIcon>
                 {getBurgerMenuIcon(text)}
               </ListItemIcon>
-              <Link to={text}>
+              <Link to={text.indexOf('About') >= 0 ? "About" : text}>
                 <ListItemText primary={text} />
               </Link>
             </ListItemButton>
           </ListItem>
+
         ))}
       </List>
       {/*   <Divider />
