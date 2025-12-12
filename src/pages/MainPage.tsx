@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import BlogPostPreview from '../components/BlogPostPreview';
 import classes from './../css/MainPage.module.scss';
+import NewsletterForm from '../components/NewsLetterForm';
 
 export default function MainPage() {
 
@@ -37,11 +38,11 @@ export default function MainPage() {
         </div>
       </div>
 
-    
+
       <div className={classes.recentPosts}>
 
         <div className={"ml-embedded " + classes.desktopView} data-form="Hzceiy"></div>
-
+        <NewsletterForm />
         <div className=" unreleased">
           <img src="/assets/\divider.png" className={classes.divider} />
           <h4>Recent blog posts</h4>
