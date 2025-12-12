@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <div className={classes.container}>
 
-      <section>
+      <div className={classes.section}>
         <img src="/assets/about image.png" alt="" width={500} />
         <div>
           <h1>Hi!</h1>
@@ -23,29 +23,29 @@ export default function AboutPage() {
               My biggest publishing achievement was perhaps when I interviewd a war veteran for a school project, which was published as part of an anthology. Rereading it now... I've got no idea who allowed to publish something with so many typos. But I was in 7th grade. So I can forgive myself that transgretion. </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <img src="/assets/\divider.png" className={classes.divider} />
 
-      <section>
+{/*       <div className={classes.section}>
         <div>My favourite tropes</div>
         <ul>
           <li>Love triangle</li>
           <li>Best of the best</li>
           <li>Misunderstood villain</li>
         </ul>
-      </section>
+      </div>
       <img src="/assets/\divider.png" className={classes.divider} />
 
-      <section>
+      <div className={classes.section}>
         <div>My favourite books</div>
         <ul>
           <li>Hunger Games</li>
           <li>Six of Crows</li>
           <li>Twilight... (it's a fun read, okay?)</li>
         </ul>
-      </section>
-      <img src="/assets/\divider.png" className={classes.divider} />
+      </div>
+      <img src="/assets/\divider.png" className={classes.divider} /> */}
     </div>
   );
 }

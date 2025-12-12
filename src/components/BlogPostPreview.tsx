@@ -1,20 +1,16 @@
 import { Link } from "react-router-dom";
 import classes from "../css/BlogPost.module.scss";
+import type { ICampaign } from "../pages/BlogPage";
 
-export default function BlogPostPreview(props: { title: string, image: string; date: string, excerpt: string, link:string }) {
+export default function BlogPostPreview(props: { campaign: ICampaign }) {
+
     return (
-        <div >
-            <Link to={props.link} className={classes.containerPreview}>
-                <img src={props.image} alt={props.title} />
-                <div className={classes.contentPreview}>
-                    <div className={classes.header}>
-                        <div>{props.title}</div>
-                        <div>{props.date}</div>
-                    </div>
-                    <div>{props.excerpt}</div>
-                </div>
-            </Link>
 
+        <div className={classes.containerPreview}>
+            <div key={props.campaign.id} className={classes.title}>{props.campaign.name}</div>
+            <div>{new Date(props.campaign.started_at).toLocaleDateString()}</div>
+            <Link className={classes.btn} to={props.campaign.emails[0].preview_url} target="_blank" rel="noopener noreferrer">Read post</Link>
         </div>
+
     );
 }

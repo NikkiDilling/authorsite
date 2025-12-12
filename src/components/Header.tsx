@@ -115,13 +115,13 @@ export default function Header() {
           />
         </a>
 
-        <a href='https://www.tiktok.com/@nicole.writes5' target='_blank'>
+{/*         <a href='https://www.tiktok.com/@nicole.writes5' target='_blank'>
           <FontAwesomeIcon
             icon={faTiktok}
             className={classes.icon}
           />
         </a>
-
+ */}
         <a href='https://www.threads.net/@ndhansen_' target='_blank'>
           <FontAwesomeIcon
             icon={faThreads}

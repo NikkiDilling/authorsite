@@ -1,8 +1,9 @@
 import { useState } from "react";
 import settings from "../../settings.json";
 import axios from "axios";
-import { Button, TextField } from "@mui/material";
+import { Button, CircularProgress, TextField } from "@mui/material";
 import classes from './../css/Newsletterform.module.scss';
+import { Link } from "react-router-dom";
 
 export default function NewsletterForm() {
     const [email, setEmail] = useState("");
@@ -14,7 +15,7 @@ export default function NewsletterForm() {
         try {
             e.preventDefault();
             setStatus("loading");
-            debugger;
+             
 
             const body = {
                 email: email,
@@ -27,13 +28,13 @@ export default function NewsletterForm() {
                 "Authorization": "Bearer " + token
             };
 
-            debugger;
+             
             const res = await axios.post((settings.baseUrl + "/subscribers"), body, { headers: headers });
 
             const data = await res;
             console.log(data);
-            debugger;
-
+             
+            setStatus("done");
         } catch (error) {
             console.error("Error submitting form:", error);
             setStatus("error");
@@ -42,16 +43,34 @@ export default function NewsletterForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className={classes.form}>
-            <div>{status}</div>
-            <TextField
-                type="email"
-                placeholder="Email"
-                required
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-            />
-            <Button variant="contained" type="submit" className={classes.subscribeBtn}>Subscribe</Button>
-        </form>
+        <div>
+            {status === "loading" && (
+                <CircularProgress />
+            )}
+            {status === null && (
+                <form onSubmit={handleSubmit} className={classes.form}>
+                    <div>{status}</div>
+                    <TextField
+                        type="email"
+                        placeholder="Email"
+                        required
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                    />
+                    <Button variant="contained" type="submit" className={classes.subscribeBtn}>Subscribe</Button>
+                </form>
+            )}
+            {status === "done" && (
+                <div>Thank you for subscribing!</div>
+            )}
+            {status === "error" && (
+                <div>
+                    <div>There was an error.</div>
+                    <Link to="https://preview.mailerlite.io/forms/1861321/170854974708778198/share" >Try again</Link>
+                </div>
+
+            )}
+        </div>
+
     );
 }

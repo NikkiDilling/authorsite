@@ -22,41 +22,25 @@ const steps = [
 
 
 export default function ProjectSunsetPage() {
-  /*   const [activeStep, setActiveStep] = useState(0);
-  
-    const handleNext = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-  
-    const handleBack = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    };
-  
-    const handleReset = () => {
-      setActiveStep(0);
-    }; */
 
   const jumpToContent = (id: string) => {
     window.location.hash = "#" + id;
   };
 
-
-
   return (
     <div className={classes.container} id='Intro'>
 
-      <h2 >Project Sunset - book one of the Elven Wastelands series</h2>
       <main>
         <div>
-          <div>Enter a world of elves, elemental spirits and intrigue!</div>
-          <h4>Quotes</h4>
           <div className={classes.quotes}>
-            <div>"Even ghosts don't like the dark."</div>
-            <div>"Perhaps they once vowed not to repeat history, but that promise got lost. A mindless echo spread through generations."</div>
+            <div>"Even demons don't like the dark."</div>
           </div>
 
           <img src="/assets/\divider.png" className={classes.divider} id='Map' />
-
+          <div>Enter a world of elves, elemental spirits and intrigue!</div>
+          <br/>
+          <div>Project Sunset is the codename the first book of the Elven Wastelands series.</div>
+              <img src="/assets/\divider.png" className={classes.divider} />
           <div>
             <img src="/assets/world map.png" alt="World Map" />
             <div style={{ textAlign: "center" }} >Map</div>

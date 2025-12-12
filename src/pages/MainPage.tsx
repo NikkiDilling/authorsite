@@ -25,8 +25,8 @@ export default function MainPage() {
 
         <div className={classes.mobileView}>
           <img src="/assets/\divider.png" className={classes.divider} />
-          <h3>Sign up for my newsletter</h3>
-          <p>Be the first to get book updates, writing tips, exclusive content, deals and so much more!</p>
+          <h3>Nicole's newsletter</h3>
+          <p>Sign up for my newsletter and be the first to get book updates, writing tips, exclusive content, deals and so much more!</p>
           <NewsletterForm />
         </div>
 
@@ -47,9 +47,9 @@ export default function MainPage() {
       <div className={classes.recentPosts}>
 
         <div className={classes.desktopView}>
-          <h3>Sign up for my newsletter</h3>
-          <p>Be the first to get book updates, writing tips, exclusive content, deals and so much more!</p>
-          
+          <h3>Sign up to my newsletter</h3>
+          <p className={classes.mobileView}>Sign up for my newsletter and be the first to get book updates, writing tips, exclusive content, deals and so much more!</p>
+
           <NewsletterForm />
         </div>
 
@@ -58,13 +58,7 @@ export default function MainPage() {
           <h4>Recent blog posts</h4>
           <div>
             {/* Blog posts will go here */}
-            <BlogPostPreview
-              title='Author Site Launched!'
-              image='/assets/\pfp.jpg'
-              date='Octoder 31, 2024'
-              excerpt='This is a test excerpt for the blog post preview component.'
-              link="/Blog/1"
-            />
+
           </div>
 
         </div>

@@ -1,13 +1,97 @@
 
-import classes from './../css/MainPage.module.scss';
+import classes from './../css/BlogPage.module.scss';
+import axios from "axios";
+import settings from "../../settings.json";
+import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+import BlogPostPreview from '../components/BlogPostPreview';
+import NewsletterForm from '../components/NewsLetterForm';
+
+export interface ICampaign {
+  id: string;
+  name: string;
+  status: string;
+  created_at: string;
+  scheduled_for: string;
+  started_at: string;
+  emails: ICampaignEmail[];
+}
+
+export interface ICampaignEmail {
+  preview_url: string;
+  plain_text: string;
+}
 
 export default function BlogPage() {
+  const [campaigns, setCampaigns] = useState<ICampaign[] | null>(null);
+  const token = import.meta.env.VITE_NewsletterToken;
 
+  useEffect(() => {
+    getCampaigns();
+  }, []);
+
+  const getCampaigns = async () => {
+    try {
+
+
+
+
+      const headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": "Bearer " + token
+      };
+
+
+      const res = await axios.get((settings.baseUrl + "/campaigns"), { headers: headers });
+
+      const data: ICampaign[] = await res?.data?.data;
+      const filteredData = data.filter(campaign => campaign.status === "sent");
+      console.log(data);
+      setCampaigns(filteredData);
+
+
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+
+  };
 
   return (
     <div className={classes.container}>
 
-      <div>Read about writer advice and other experiences I deemed worthy of sharing </div>
+      <div className={classes.description}>Read previous newsletters where I share my writing progress, exclusive book content, writing advice and life updates. </div>
+
+      <div className={classes.body}>
+
+        <div className={classes.postsContainer}>
+          {campaigns === null ? (
+            <div>
+              <div>There are no posts yet. Come back later</div>
+            </div>
+
+          ) : (
+            <div>
+              {
+                campaigns.map((campaign: any) => (
+                  <BlogPostPreview key={campaign.id} campaign={campaign} />
+
+                ))
+              }
+            </div>
+
+          )}
+        </div>
+
+        <img src="/assets/\divider.png" className={classes.divider} />
+
+        <div className={classes.newsletterSignup}>
+          <h3>Sign up for the newsletter</h3>
+          <NewsletterForm />
+        </div>
+      </div>
+
+
 
     </div>
   );
