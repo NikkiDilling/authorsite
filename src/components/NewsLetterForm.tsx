@@ -18,7 +18,7 @@ export default function NewsletterForm() {
                 email: email,
                 groups: [settings.groupId]
             }
-            const jsonBody = JSON.stringify(body);
+
             const headers = {
                 "Content-Type": "application/json",
                 "Accept": "application/json",
@@ -41,6 +41,7 @@ export default function NewsletterForm() {
 
     return (
         <form onSubmit={handleSubmit} className={classes.form}>
+            <div>{status}</div>
             <TextField
                 type="email"
                 placeholder="Email"
