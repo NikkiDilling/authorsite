@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoodreads, faInstagram, faTiktok, faThreads } from '@fortawesome/free-brands-svg-icons';
+import { faGoodreads, faInstagram, faThreads } from '@fortawesome/free-brands-svg-icons';
 import MenuIcon from '@mui/icons-material/Menu';
 import MailIcon from '@mui/icons-material/Mail';
 import classes from './../css/Header.module.scss';

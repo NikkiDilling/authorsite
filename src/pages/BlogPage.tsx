@@ -3,7 +3,6 @@ import classes from './../css/BlogPage.module.scss';
 import axios from "axios";
 import settings from "../../settings.json";
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
 import BlogPostPreview from '../components/BlogPostPreview';
 import NewsletterForm from '../components/NewsLetterForm';
 

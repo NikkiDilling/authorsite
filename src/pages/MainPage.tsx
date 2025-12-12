@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import BlogPostPreview from '../components/BlogPostPreview';
 import classes from './../css/MainPage.module.scss';
 import NewsletterForm from '../components/NewsLetterForm';
 
