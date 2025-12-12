@@ -64,7 +64,7 @@ export default function BlogPage() {
       <div className={classes.body}>
 
         <div className={classes.postsContainer}>
-          {campaigns === null ? (
+          {(campaigns === null || campaigns.length <= 0) ? (
             <div>
               <div>There are no posts yet. Come back later</div>
             </div>
