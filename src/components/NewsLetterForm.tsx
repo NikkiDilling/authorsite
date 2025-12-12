@@ -7,6 +7,8 @@ import classes from './../css/Newsletterform.module.scss';
 export default function NewsletterForm() {
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<string | null>(null);
+    const token = import.meta.env.VITE_NewsletterToken;
+    const groupId = import.meta.env.VITE_GroupId;
 
     const handleSubmit = async (e: any) => {
         try {
@@ -16,13 +18,13 @@ export default function NewsletterForm() {
 
             const body = {
                 email: email,
-                groups: [settings.groupId]
+                groups: [groupId]
             }
 
             const headers = {
                 "Content-Type": "application/json",
                 "Accept": "application/json",
-                "Authorization": "Bearer " + settings.newsletterToken
+                "Authorization": "Bearer " + token
             };
 
             debugger;
