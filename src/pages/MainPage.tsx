@@ -49,6 +49,7 @@ export default function MainPage() {
         <div className={classes.desktopView}>
           <h3>Sign up for my newsletter</h3>
           <p>Be the first to get book updates, writing tips, exclusive content, deals and so much more!</p>
+          
           <NewsletterForm />
         </div>
 
