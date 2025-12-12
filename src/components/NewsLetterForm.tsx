@@ -2,7 +2,7 @@ import { useState } from "react";
 import settings from "../../settings.json";
 import axios from "axios";
 import { Button, TextField } from "@mui/material";
-import classes from './../css/NewsLetterForm.module.scss';
+import classes from './../css/Newsletterform.module.scss';
 
 export default function NewsletterForm() {
     const [email, setEmail] = useState("");
