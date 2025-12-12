@@ -23,7 +23,12 @@ export default function MainPage() {
 
         </div>
 
-        <div className={"ml-embedded " + classes.mobileView} data-form="Hzceiy"></div>
+        <div className={classes.mobileView}>
+          <img src="/assets/\divider.png" className={classes.divider} />
+          <h3>Sign up for my newsletter</h3>
+          <p>Be the first to get book updates, writing tips, exclusive content, deals and so much more!</p>
+          <NewsletterForm />
+        </div>
 
         <img src="/assets/\divider.png" className={classes.divider} />
 
@@ -41,8 +46,12 @@ export default function MainPage() {
 
       <div className={classes.recentPosts}>
 
-        <div className={"ml-embedded " + classes.desktopView} data-form="Hzceiy"></div>
-        <NewsletterForm />
+        <div className={classes.desktopView}>
+          <h3>Sign up for my newsletter</h3>
+          <p>Be the first to get book updates, writing tips, exclusive content, deals and so much more!</p>
+          <NewsletterForm />
+        </div>
+
         <div className=" unreleased">
           <img src="/assets/\divider.png" className={classes.divider} />
           <h4>Recent blog posts</h4>

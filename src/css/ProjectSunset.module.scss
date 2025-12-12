@@ -3,7 +3,7 @@
     color: #39275B;
     height: 100%;
     width: 95%;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     padding: 10px 0;
     flex-direction: column;
@@ -12,7 +12,7 @@
     h2 {
         font-size: 30px;
         font-style: italic;
-        padding: 5px !important;
+        padding: 5px 0 !important;
     }
 
     main {
@@ -34,10 +34,7 @@
     }
 
     section {
-        padding: 0 10px;
-        position: fixed;
-        right: 10px;
-        top: 100px;
+     display: none;
     }
 
     circle,
@@ -51,5 +48,15 @@
         font-style: italic;
         text-align: center;
         color: rgb(231, 14, 134);
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    section {
+        display: block !important;
+        padding: 0 10px;
+        position: fixed;
+        right: 10px;
+        top: 100px;
     }
 }

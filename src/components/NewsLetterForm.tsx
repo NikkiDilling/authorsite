@@ -1,6 +1,8 @@
 import { useState } from "react";
 import settings from "../../settings.json";
 import axios from "axios";
+import { Button, TextField } from "@mui/material";
+import classes from './../css/NewsLetterForm.module.scss';
 
 export default function NewsletterForm() {
     const [email, setEmail] = useState("");
@@ -38,19 +40,15 @@ export default function NewsletterForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
+        <form onSubmit={handleSubmit} className={classes.form}>
+            <TextField
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Email"
                 required
                 value={email}
                 onChange={e => setEmail(e.target.value)}
             />
-            <button type="submit">Subscribe</button>
-
-            {status === "loading" && <p>Submitting…</p>}
-            {status === "success" && <p>You're subscribed!</p>}
-            {status === "error" && <p>Oops, something went wrong.</p>}
+            <Button variant="contained" type="submit" className={classes.subscribeBtn}>Subscribe</Button>
         </form>
     );
 }
