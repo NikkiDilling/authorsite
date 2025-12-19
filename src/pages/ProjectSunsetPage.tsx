@@ -1,5 +1,5 @@
 import classes from './../css/ProjectSunset.module.scss';
-import banner from "../assets/banner.webp";
+import banner from "../assets/Elven Wastelands banner 1.webp";
 
 export default function ProjectSunsetPage() {
 
