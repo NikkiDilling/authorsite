@@ -1,11 +1,12 @@
 import classes from './../css/ProjectSunset.module.scss';
+import banner from "../assets/banner.png";
 
 export default function ProjectSunsetPage() {
 
   return (
     <div className={classes.container} id='Intro'>
       <div className={classes.banner}>
-        <img src="/assets/\Elven Wastelands banner 1.png" alt="Elven Wastelands banner" />
+        <img src={banner} alt="Elven Wastelands banner" />
       </div>
       <main>
         <div>
