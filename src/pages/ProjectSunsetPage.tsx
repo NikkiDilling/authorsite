@@ -1,6 +1,6 @@
 import classes from './../css/ProjectSunset.module.scss';
 import banner from "../assets/Elven Wastelands banner 1.webp";
-import map from "../assets/world map.png";
+import map from "../assets/world map.webp";
 import divider from "../assets/divider.webp";
 
 export default function ProjectSunsetPage() {
