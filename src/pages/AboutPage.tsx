@@ -1,6 +1,6 @@
 
 import classes from './../css/AboutPage.module.scss';
-
+import about from "../assets/about image.webp";
 
 export default function AboutPage() {
 
@@ -9,7 +9,7 @@ export default function AboutPage() {
     <div className={classes.container}>
 
       <div className={classes.section}>
-        <img src="/assets/about image.png" alt="" width={500} />
+        <img src={about} alt="" width={500} />
         <div>
           <h1>Hi!</h1>
 

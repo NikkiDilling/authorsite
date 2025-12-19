@@ -23,7 +23,12 @@ export default function ProjectSunsetPage() {
           </div>
           <img src="/assets/\divider.png" className={classes.divider} />
           <div>
-            <img className={classes.map} src="/assets/world map.png" alt="World Map" />
+            <img
+              className={classes.map}
+              src="/assets/world map.png"
+              alt="World Map"
+              loading="lazy"
+            />
             <div style={{ textAlign: "center" }} >Map</div>
           </div>
 
