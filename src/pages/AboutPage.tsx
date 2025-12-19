@@ -2,7 +2,7 @@
 import classes from './../css/AboutPage.module.scss';
 import about from "../assets/about image.webp";
 import aries from "../assets/aries.webp";
-import divider from "../assets/divider.png";
+import divider from "../assets/divider.webp";
 
 export default function AboutPage() {
 
