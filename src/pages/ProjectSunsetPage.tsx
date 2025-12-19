@@ -1,5 +1,5 @@
 import classes from './../css/ProjectSunset.module.scss';
-import banner from "../assets/banner.png";
+import banner from "../assets/banner.webp";
 
 export default function ProjectSunsetPage() {
 
