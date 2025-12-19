@@ -3,11 +3,11 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import tayremArt from './../../assets/Tayrem-commission.webp';
-import tayremNElayah from './../../assets/Tayrem & Elayah.webp';
-import sigil from './../../assets/Vanadian sigil.webp';
-import firstMeeting from './../../assets/first meeting.webp';
-import tayremChained from './../../assets/Tayrem-chained.webp';
+import tayremArt from '../assets/Tayrem-commission.webp';
+import tayremNElayah from '../assets/Tayrem & Elayah.webp';
+import sigil from '../assets/Vanadian sigil.webp';
+import firstMeeting from '../assets/first meeting.webp';
+import tayremChained from '../assets/Tayrem-chained.webp';
 
 export default function ArtPage() {
 
