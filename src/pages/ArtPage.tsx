@@ -3,32 +3,37 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import tayremArt from './../../assets/Tayrem(art).webp';
+import tayremNElayah from './../../assets/Tayrem & Elayah.webp';
+import sigil from './../../assets/Vanadian sigil.webp';
+import firstMeeting from './../../assets/first meeting.webp';
+import tayremChained from './../../assets/Tayrem (chained).webp';
 
 export default function ArtPage() {
 
     const itemData = [
         {
-            img: '/assets/Tayrem(art).png',
+            img: tayremArt,
             title: 'Tayrem - Half body',
             author: 'ig: Kostojj',
         },
         {
-            img: '/assets/Tayrem & Elayah.png',
+            img: tayremNElayah,
             title: 'Tayrem & Elayah',
             author: 'Nicole D. Hansen',
         },
         {
-            img: '/assets/Vanadian sigil.png',
+            img: sigil,
             title: 'Vanadium sigil',
             author: 'Nicole D. Hansen',
         },
         {
-            img: '/assets/first meeting.jpg',
+            img: firstMeeting,
             title: 'First meeting',
             author: 'Nicole D. Hansen',
         },
         {
-            img: '/assets/Tayrem (chained).jpg',
+            img: tayremChained,
             title: 'Tayrem ch.7 scene',
             author: 'Nicole D. Hansen',
         }
@@ -38,7 +43,7 @@ export default function ArtPage() {
             <div>
                 Here are some artworks either made by me or commissioned from other artists for my books.
             </div>
-            
+
             <Box className={classes.box}>
                 <ImageList variant="masonry" cols={3} gap={15}>
                     {itemData.map((item) => (

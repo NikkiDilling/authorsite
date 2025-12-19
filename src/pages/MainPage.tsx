@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import classes from './../css/MainPage.module.scss';
 import NewsletterForm from '../components/NewsLetterForm';
+import divider from "../assets/divider.webp";
+import pfp from "../assets/pfp.gif";
 
 export default function MainPage() {
 
@@ -11,7 +13,7 @@ export default function MainPage() {
         <h1>Welcome!</h1>
 
         <div className={classes.section}>
-          <img src="/assets/\pfp.gif" alt="profile image" className={classes.pfp} />
+          <img src={pfp} alt="profile image" className={classes.pfp} />
           <div className={classes.sectionContent}>
             <div>
               <div>My name is Nicole. I’m a writer from Denmark who daylights as a software developer. </div>
@@ -23,13 +25,13 @@ export default function MainPage() {
         </div>
 
         <div className={classes.mobileView}>
-          <img src="/assets/\divider.png" className={classes.divider} />
+          <img src={divider} className={classes.divider} />
           <h3>Nicole's newsletter</h3>
           <p>Sign up for my newsletter and be the first to get book updates, writing tips, exclusive content, deals and so much more!</p>
           <NewsletterForm />
         </div>
 
-        <img src="/assets/\divider.png" className={classes.divider} />
+        <img src={divider} className={classes.divider} />
 
         <div className={classes.section}>
           <div className={classes.sectionContent}>
@@ -53,7 +55,7 @@ export default function MainPage() {
         </div>
 
         <div className=" unreleased">
-          <img src="/assets/\divider.png" className={classes.divider} />
+          <img src={divider} className={classes.divider} />
           <h4>Recent blog posts</h4>
           <div>
             {/* Blog posts will go here */}

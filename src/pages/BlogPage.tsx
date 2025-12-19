@@ -5,6 +5,7 @@ import settings from "../../settings.json";
 import { useEffect, useState } from "react";
 import BlogPostPreview from '../components/BlogPostPreview';
 import NewsletterForm from '../components/NewsLetterForm';
+import divider from "../assets/divider.webp";
 
 export interface ICampaign {
   id: string;
@@ -82,15 +83,13 @@ export default function BlogPage() {
           )}
         </div>
 
-        <img src="/assets/\divider.png" className={classes.divider} />
+        <img src={divider} className={classes.divider} />
 
         <div className={classes.newsletterSignup}>
           <h3>Sign up for the newsletter</h3>
           <NewsletterForm />
         </div>
       </div>
-
-
 
     </div>
   );

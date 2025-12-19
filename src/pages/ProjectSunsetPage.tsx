@@ -1,5 +1,7 @@
 import classes from './../css/ProjectSunset.module.scss';
 import banner from "../assets/Elven Wastelands banner 1.webp";
+import map from "../assets/world map.png";
+import divider from "../assets/divider.webp";
 
 export default function ProjectSunsetPage() {
 
@@ -15,37 +17,37 @@ export default function ProjectSunsetPage() {
             <div>"Even demons don't like the dark."</div>
           </div>
 
-          <img src="/assets/\divider.png" className={classes.divider} />
+          <img src={divider} className={classes.divider} />
           <div className={classes.textContainer}>
             <div>Enter a world of elves, elemental spirits and intrigue!</div>
             <br />
             <div>Project Sunset is the codename the first book of the Elven Wastelands series.</div>
           </div>
-          <img src="/assets/\divider.png" className={classes.divider} />
+          <img src={divider} className={classes.divider} />
           <div>
             <img
               className={classes.map}
-              src="/assets/world map.png"
+              src={map}
               alt="World Map"
               loading="lazy"
             />
             <div style={{ textAlign: "center" }} >Map</div>
           </div>
 
-          <img src="/assets/\divider.png" className={classes.divider} />
+          <img src={divider} className={classes.divider} />
 
           <div className={classes.textContainer}>
             <h2> Elven Wastelands series</h2>
             <div>Currently </div>
           </div>
 
-          <img src="/assets/\divider.png" className={classes.divider} />
+          <img src={divider} className={classes.divider} />
 
           <div className={classes.textContainer}>
             <div> some text </div>
           </div>
 
-          <img src="/assets/\divider.png" className={classes.divider} />
+          <img src={divider} className={classes.divider} />
 
           <div className={classes.textContainer}>
             <div> some text </div>

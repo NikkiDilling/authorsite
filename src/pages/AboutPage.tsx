@@ -1,6 +1,8 @@
 
 import classes from './../css/AboutPage.module.scss';
 import about from "../assets/about image.webp";
+import aries from "../assets/aries.webp";
+import divider from "../assets/divider.png";
 
 export default function AboutPage() {
 
@@ -15,7 +17,7 @@ export default function AboutPage() {
 
           <div style={{ display: "flex", flexDirection: "row", alignItems: "center", padding: "0 0 20px 0" }}>
             <div>Star Sign:</div>
-            <img src="/assets/aries.png" alt="star sign" width={100} />
+            <img src={aries} alt="star sign" width={100} />
           </div>
           <div className={classes.content}>
             <div>
@@ -25,7 +27,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <img src="/assets/\divider.png" className={classes.divider} />
+      <img src={divider} className={classes.divider} />
 
 {/*       <div className={classes.section}>
         <div>My favourite tropes</div>
