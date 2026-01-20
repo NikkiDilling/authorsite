@@ -16,10 +16,12 @@ import { useState } from 'react';
 export default function ArtPage() {
     const [open, setOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
+
     const handleOpen = (image: any) => {
         setSelectedImage(image);
         setOpen(true);
     }
+
     const itemData = [
         {
             img: elayah,

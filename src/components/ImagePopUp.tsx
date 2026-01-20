@@ -1,6 +1,5 @@
-import { Dialog, DialogContent } from "@mui/material";
-
-
+import { Dialog, DialogContent, IconButton } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 
 
 export default function ImagePopUp(props: { image: any, open: boolean, handleClose: () => void }) {
@@ -11,6 +10,7 @@ export default function ImagePopUp(props: { image: any, open: boolean, handleClo
                 open={props.open}
                 onClose={props.handleClose}
                 maxWidth={false}
+
                 PaperProps={{
                     style: {
                         width: '90vw',
@@ -20,6 +20,18 @@ export default function ImagePopUp(props: { image: any, open: boolean, handleClo
                     },
                 }}
             >
+                <IconButton
+                    aria-label="close"
+                    onClick={props.handleClose}
+                    sx={(theme) => ({
+                        position: 'absolute',
+                        right: 8,
+                        top: 8,
+                        color: theme.palette.grey[500],
+                    })}
+                >
+                    <CloseIcon />
+                </IconButton>
                 <DialogContent
                     style={{
                         padding: 0,
