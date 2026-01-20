@@ -9,6 +9,12 @@
     flex-direction: column;
 }
 
+h3 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
 
 .swiper {
     width: 90vw;
@@ -44,6 +50,11 @@ div[class="swiper-button-prev"], div[class="swiper-button-next"]{
     text-align: start;
     margin-top: 20px;
     margin-left: 10px;
+}
+
+.description{
+    font-size: 22px;
+    line-height: 2;
 }
 
 @media only screen and (min-width: 1600px) {

@@ -4,20 +4,33 @@ import tayremNElayah from '../assets/Tayrem & Elayah.webp';
 import sigil from '../assets/Vanadian sigil.webp';
 import firstMeeting from '../assets/first meeting.webp';
 import tayremChained from '../assets/Tayrem-chained.webp';
+import elayah from '../assets/Elayah-mosaic.webp';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import 'swiper/swiper-bundle.css';
+import ImagePopUp from '../components/ImagePopUp';
+import { useState } from 'react';
 
 export default function ArtPage() {
-
+    const [open, setOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
+    const handleOpen = (image: any) => {
+        setSelectedImage(image);
+        setOpen(true);
+    }
     const itemData = [
         {
+            img: elayah,
+            title: 'Elayah',
+            author: 'Nicole D. Hansen',
+        },
+        {
             img: tayremArt,
-            title: 'Tayrem - Half body',
+            title: 'Tayrem commission',
             author: 'Kostojj',
-            ig: "https://www.instagram.com/kostojjn/"
+            ig: "https://www.instagram.com/kostojjn"
         },
         {
             img: tayremNElayah,
@@ -36,14 +49,26 @@ export default function ArtPage() {
         },
         {
             img: tayremChained,
-            title: 'Tayrem ch.7 scene',
+            title: 'Tayrem',
             author: 'Nicole D. Hansen',
         }
     ];
+
+
     return (
         <div className={classes.container}>
-            <div>
-                Here are some artworks either made by me or commissioned from other artists for my books.
+            <h3>Aaaart!</h3>
+            <div className={classes.description}>
+                I love art, and support REAL human artists!
+                <div>
+                    Below are some pieces commissioned from amazing artists,
+                    as well as some of my own amateur artwork.
+                </div>
+
+                <div>
+                    Hope you enjoy!
+                </div>
+
             </div>
 
             <Swiper
@@ -58,7 +83,8 @@ export default function ArtPage() {
             >
 
                 {itemData.map((item, index) => (
-                    <SwiperSlide>
+                    <SwiperSlide
+                        onClick={() => handleOpen(item.img)} key={index}>
                         <div className={classes.imageWrapper}>
                             <img
                                 key={index}
@@ -73,9 +99,9 @@ export default function ArtPage() {
                             <div className={classes.title}>"{item.title}"</div>
                             {item.ig ?
                                 (
-                                    <div style={{display: "flex", flexDirection: "row"}}>
+                                    <div style={{ display: "flex", flexDirection: "row" }}>
                                         <div className={classes.author}>by: {item.author}</div>
-                                        <a href='https://www.instagram.com/ndhansen_' target='_blank' style={{marginLeft: "10px"}}>
+                                        <a href='https://www.instagram.com/ndhansen_' target='_blank' style={{ marginLeft: "10px" }}>
                                             <FontAwesomeIcon
                                                 icon={faInstagram}
                                                 className={classes.icon}
@@ -96,7 +122,7 @@ export default function ArtPage() {
 
             </Swiper>
 
-
+            <ImagePopUp image={selectedImage} open={open} handleClose={() => setOpen(false)} />
         </div>
     );
 }
