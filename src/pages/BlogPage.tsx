@@ -33,15 +33,11 @@ export default function BlogPage() {
   const getCampaigns = async () => {
     try {
 
-
-
-
       const headers = {
         "Content-Type": "application/json",
         "Accept": "application/json",
         "Authorization": "Bearer " + token
       };
-
 
       const res = await axios.get((settings.baseUrl + "/campaigns"), { headers: headers });
 
@@ -60,28 +56,28 @@ export default function BlogPage() {
   return (
     <div className={classes.container}>
 
+      <h3>Newsletter Archive</h3>
+
       <div className={classes.description}>Read previous newsletters where I share my writing progress, exclusive book content, writing advice and life updates. </div>
 
       <div className={classes.body}>
 
-        <div className={classes.postsContainer}>
-          {(campaigns === null || campaigns.length <= 0) ? (
-            <div>
-              <div>There are no posts yet. Come back later</div>
-            </div>
+        {(campaigns === null || campaigns.length <= 0) ? (
+          <div className={classes.postsContainer}>
+            <div>There are no posts yet. Come back later</div>
+          </div>
 
-          ) : (
-            <div>
-              {
-                campaigns.map((campaign: any) => (
-                  <BlogPostPreview key={campaign.id} campaign={campaign} />
+        ) : (
+          <div className={classes.postsContainer}>
+            {
+              campaigns.map((campaign: any) => (
+                <BlogPostPreview key={campaign.id} campaign={campaign} />
 
-                ))
-              }
-            </div>
+              ))
+            }
+          </div>
 
-          )}
-        </div>
+        )}
 
         <img src={divider} className={classes.divider} />
 

@@ -2,7 +2,7 @@
     background: #ffff;
     color: #39275B;
     height: 100%;
-    margin: 10px auto;
+    margin: 30px auto;
     display: flex;
     padding: 0 50px;
     padding-bottom: 15px;
@@ -16,6 +16,10 @@
     }
 }
 
+.text{
+    margin: 15px 0;
+}
+ 
 .readMoreBtn {
     margin-top: 15px;
     width: fit-content;
@@ -53,6 +57,7 @@ img {
 .mainSection {
     flex: 3;
 
+
     .section {
         display: flex;
         flex-direction: row;
@@ -66,14 +71,14 @@ img {
     }
 }
 
-.desktopView{
+.desktopView {
     display: none;
 }
 
-.mobileView{
+.mobileView {
     display: block;
     width: 100%;
-/*     background: #39275B; */
+    /*     background: #39275B; */
 }
 
 @media only screen and (min-width: 1600px) {
@@ -88,13 +93,13 @@ img {
         }
     }
 
-    .desktopView{
+    .desktopView {
         display: block;
         width: 90%;
         margin-left: auto;
     }
 
-    .mobileView{
+    .mobileView {
         display: none !important;
         background: red;
     }

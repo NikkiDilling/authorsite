@@ -9,12 +9,6 @@
     flex-direction: column;
 }
 
-h3 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 10px;
-    font-style: italic;
-}
 
 .swiper {
     width: 90vw;
@@ -22,7 +16,8 @@ h3 {
     margin: 20px auto;
 }
 
-div[class="swiper-button-prev"], div[class="swiper-button-next"]{
+div[class="swiper-button-prev"],
+div[class="swiper-button-next"] {
     color: #39275B;
 }
 
@@ -34,8 +29,8 @@ div[class="swiper-button-prev"], div[class="swiper-button-next"]{
     background: #f4f4f6;
     /* optional neutral backdrop */
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
 }
 
@@ -52,7 +47,7 @@ div[class="swiper-button-prev"], div[class="swiper-button-next"]{
     margin-left: 10px;
 }
 
-.description{
+.description {
     font-size: 22px;
     line-height: 2;
 }

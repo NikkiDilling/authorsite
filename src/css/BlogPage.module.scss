@@ -20,7 +20,8 @@
 .postsContainer {
     margin-top: 30px;
     flex: 4;
-
+    display: flex;
+    flex-direction: column;
 
 }
 

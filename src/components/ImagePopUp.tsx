@@ -51,6 +51,7 @@ export default function ImagePopUp(props: { image: any, open: boolean, handleClo
                             maxHeight: '100%',
                             objectFit: 'contain', // 👈 no crop, no distortion
                             display: 'block',
+                            margin: 0
                         }}
                     />
                 </DialogContent>

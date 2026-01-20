@@ -10,14 +10,14 @@ export default function MainPage() {
     <div className={classes.container}>
 
       <div className={classes.mainSection}>
-        <h1>Welcome!</h1>
 
         <div className={classes.section}>
           <img src={pfp} alt="profile image" className={classes.pfp} />
           <div className={classes.sectionContent}>
             <div>
-              <div>My name is Nicole. I’m a writer from Denmark who daylights as a software developer. </div>
-              <div>Here on my author site, you can find information about me, my writing journey, and my debut novel, "Project Sunset". ...</div>
+              <div className={classes.text}>Hi! My name is Nicole D. Hansen, and I'm an indie author, from Denmark. </div>
+              <div className={classes.text}>I write delicious slow burn romantasy with characters and plot-lines that will heal your inner child. </div>
+              <div className={classes.text}>I also daylight as a software developer. </div>
             </div>
             <Link to='/About' className={classes.readMoreBtn} >Learn more about me</Link>
           </div>
