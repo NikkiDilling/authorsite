@@ -49,25 +49,27 @@ export default function Header() {
 
   const list = () => (
     <Box
-      sx={{ width: "100%"}}
+      sx={{ width: "100%" }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       <List>
         {['Books', 'Blog', 'Art', 'About Author', 'Contact'].map((text) => (
+          <Link to={text.indexOf('About') >= 0 ? "About" : text} key={text}>
+            <ListItem disablePadding className={classes.listItem}>
 
-          <ListItem key={text} disablePadding className={classes.listItem}>
-            <ListItemButton>
-              <ListItemIcon>
-                {getBurgerMenuIcon(text)}
-              </ListItemIcon>
-              <Link to={text.indexOf('About') >= 0 ? "About" : text}>
+              <ListItemButton>
+                <ListItemIcon>
+                  {getBurgerMenuIcon(text)}
+                </ListItemIcon>
+
                 <ListItemText primary={text} />
-              </Link>
-            </ListItemButton>
-          </ListItem>
 
+              </ListItemButton>
+
+            </ListItem>
+          </Link>
         ))}
       </List>
       {/*   <Divider />
@@ -115,7 +117,7 @@ export default function Header() {
           />
         </a>
 
-{/*         <a href='https://www.tiktok.com/@nicole.writes5' target='_blank'>
+        {/*         <a href='https://www.tiktok.com/@nicole.writes5' target='_blank'>
           <FontAwesomeIcon
             icon={faTiktok}
             className={classes.icon}
