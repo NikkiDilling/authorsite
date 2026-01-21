@@ -5,9 +5,15 @@
     .listItem a  div span, .listItem svg{
         font-size: 42px !important;
         width: fit-content;
+        color: #39275B;
+        text-decoration: none !important;
     }
     .listItem {
         margin: 20px;
+    }
+
+    .listItem svg{
+        fill: #39275B;
     }
    .container {
         background: #EFEEFC;

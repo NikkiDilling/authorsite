@@ -56,8 +56,8 @@ export default function Header() {
     >
       <List>
         {['Books', 'Blog', 'Art', 'About Author', 'Contact'].map((text) => (
-          <Link to={text.indexOf('About') >= 0 ? "About" : text} key={text}>
-            <ListItem disablePadding className={classes.listItem}>
+          <Link to={text.indexOf('About') >= 0 ? "About" : text} key={text} className={classes.listItem}>
+            <ListItem disablePadding >
 
               <ListItemButton>
                 <ListItemIcon>
