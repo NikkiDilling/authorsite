@@ -14,14 +14,14 @@
 
 .body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .postsContainer {
     margin-top: 30px;
     flex: 4;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
 }
 
