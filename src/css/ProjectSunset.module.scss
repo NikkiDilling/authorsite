@@ -18,6 +18,10 @@
         width: 90%;
     }
 
+    .text {
+        margin: 15px 0;
+    }
+
     main {
         display: flex;
         flex-direction: row;
@@ -47,6 +51,11 @@
         fill: #755da3;
     }
 
+    .bookTitle{
+        font-style: italic;
+        font-weight: 700;
+        color: rgb(231, 14, 134);
+    }
     .quotes {
         font-size: 28px;
         line-height: 2;
